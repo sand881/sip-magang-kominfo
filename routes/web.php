@@ -25,4 +25,16 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::put('dataibu/{id}', function () {
+        return view('DataIbuController@update');
+    })->name('dataibu.update');
+
+    Route::get('/dataibu/create', function () {
+        return view('DataIbuController@create');
+    })->name('dataibu.create');
+
+    Route::post('/dataibu', function (){
+        return view('DataIbuController@store');
+    })->name('dataibu.store');
 });
