@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\PengukuranModel;
 use Illuminate\Http\Request;
-use App\Models\Pengukuran;
 
 class PengukuranController extends Controller
 {
-    public function create(Request $request)
+    public function inputPengukuran(Request $request)
     {
         // Validasi input dari form
         $validatedData = $request->validate([
@@ -23,7 +24,7 @@ class PengukuranController extends Controller
         ]);
 
         // Simpan data pengukuran ke dalam database
-        $pengukuran = new Pengukuran;
+        $pengukuran = new PengukuranModel();
         $pengukuran->nama = $request->nama;
         $pengukuran->umur = $request->umur;
         $pengukuran->usia_kandungan = $request->usia_kandungan;

@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\DataIbuModel;
 use Illuminate\Http\Request;
-use App\Models\DataIbu;
 
 class DataIbuController extends Controller
 {
-    public function tambahDataIbu(Request $request)
+    public function inputDataIbu(Request $request)
     {
-        $data = new DataIbu();
+        $data = new DataIbuModel();
         $data->nama = $request->input('nama');
         $data->nik = $request->input('nik');
         $data->alamat = $request->input('alamat');

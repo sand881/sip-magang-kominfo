@@ -5,11 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DataIbu extends Model
+class DataIbuModel extends Model
 {
     use HasFactory;
-
-    protected $table = 'dataibu';
 
     protected $fillable = [
         'nama',
@@ -21,6 +19,4 @@ class DataIbu extends Model
         'desa_id',
         'posyandu_id',
     ];
-
-    // Relasi jika diperlukan
 }

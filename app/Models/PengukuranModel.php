@@ -5,11 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pengukuran extends Model
+class PengukuranModel extends Model
 {
     use HasFactory;
-
-    protected $table = 'pengukuran';
 
     protected $fillable = [
         'nama',
@@ -21,9 +19,4 @@ class Pengukuran extends Model
         'status_gizi',
         'catatan',
     ];
-
-    public function pengukuran()
-    {
-        return $this->belongsTo(Pengukuran::class, 'pengukuran');
-    }
 }
