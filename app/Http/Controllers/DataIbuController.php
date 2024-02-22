@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\DataIbuModel;
+use App\Models\DataIbu;
 use Illuminate\Http\Request;
 
 class DataIbuController extends Controller
 {
     public function inputDataIbu(Request $request)
     {
-        $data = new DataIbuModel();
+        $data = new DataIbu();
         $data->nama = $request->input('nama');
         $data->nik = $request->input('nik');
         $data->alamat = $request->input('alamat');

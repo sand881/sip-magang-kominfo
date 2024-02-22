@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Pengukuran;
 use App\Models\PengukuranModel;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,7 @@ class PengukuranController extends Controller
         ]);
 
         // Simpan data pengukuran ke dalam database
-        $pengukuran = new PengukuranModel();
+        $pengukuran = new Pengukuran();
         $pengukuran->nama = $request->nama;
         $pengukuran->umur = $request->umur;
         $pengukuran->usia_kandungan = $request->usia_kandungan;
